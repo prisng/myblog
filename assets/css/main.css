@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+nav ul, footer ul {
+    list-style: none;
+    display: inline-flex;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    width: 100%;
+}
+
+nav ul li, footer ul li {
+    outline: 1px solid transparent;
+    width: 100%;
+    padding: 20px;
+    background-color: lightgray;
+}
+
+/*
+nav ul li::after {
+  content: "•";
+  padding-left: 8px;
+  padding-right: 8px;
+}
+*/
+
+nav ul li:hover, footer ul li:hover {
+  cursor: pointer;
+  background-color: darkgray;
+  transition: 0.5s;
+}
+
+nav ul li:active {
+  background-color: darkgray;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    font-weight: lighter;
+}
+
+p {
+    font-size: 120%;
+    line-height: 1.4em;
+    color: #333;
+    font-weight: lighter;
+}
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+
+/*
+ul.posts {
+    margin: 20px auto 40px;
+    font-size: 1.5em;
+}
+
+ul.posts li {
+    list-style: none;
+}
+*/
+
+.title, .tagline {
+  text-align: center;
+}
+
+#myphoto {
+  padding-top: 25px;
+  width: 15%;
+  height: auto;
+}
+
+.blurb {
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 10px;
+}
+
+.navbar {
+  text-align: left;
+}
+
+.cover {
+  padding: 220px;
+  margin: 0;
+  font-size: 150%;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* make cover background image translucent */
+.cover::before {
+  content: "";
+  background-image: url(/assets/pinkflowers.jpg);
+  background-size: 100% 100%;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}

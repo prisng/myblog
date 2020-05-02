@@ -1,3 +1,5 @@
 name: Test Blog
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+
+header: /assets/redflowers.jpg
