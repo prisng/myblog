@@ -5,51 +5,6 @@ body {
     text-align: center;
 }
 
-nav ul, footer ul {
-    list-style: none;
-    display: inline-flex;
-    font-weight: bold;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background-color: lightgray;
-    width: 100%;
-}
-
-nav ul li, footer ul li {
-    outline: 1px solid transparent;
-    width: 100%;
-    padding: 20px;
-    background-color: lightgray;
-}
-
-/*
-nav ul li::after {
-  content: "•";
-  padding-left: 8px;
-  padding-right: 8px;
-}
-*/
-
-nav ul li:hover, footer ul li:hover {
-  cursor: pointer;
-  background-color: darkgray;
-  transition: 0.5s;
-}
-
-nav ul li:active {
-  background-color: darkgray;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 h3 {
     font-weight: lighter;
 }
@@ -60,9 +15,88 @@ p {
     color: #333;
     font-weight: lighter;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+    display: block; /* for clickable item list links */
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #b5a1ab;
+    padding: 7.5px;
+    margin: auto 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: inline-flex;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    display: block;
+    outline: 1px solid transparent;
+    width: 100%;
+    padding: 20px;
+    background-color: #b5a1ab;
+}
+
+nav ul li:hover {
+    cursor: pointer;
+    background-color: #c9b5be;
+    transition: 0.5s;
+}
+
 footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+    border-top: 1px solid #b5a1ab;
+    font-size: .75em;
+    padding: 7.5px;
+    margin: auto 100px;
+}
+
+footer ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: auto 2.5em;
+}
+
+footer ul li a {
+    display: inline;
+    color: #b5a1ab;
+}
+
+footer ul li a:hover #unlocked, footer ul li a #locked {
+    display: none;
+    text-decoration: none;
+}
+
+footer ul li a:hover #locked {
+    display: inline;
+    text-decoration: none;
+    -webkit-animation: fadeIn 1.25s;
+    animation: fadeIn 1.5s;
+}
+
+/* Animations for fading footer icons */
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
 }
 
 /*
