@@ -5,7 +5,12 @@ body {
     text-align: center;
 }
 
+h1 {
+    font-size: 2.5rem;
+}
+
 h3 {
+    font-size: 1.25rem;
     font-weight: lighter;
 }
 
@@ -89,7 +94,7 @@ footer ul li a:hover #locked {
     animation: fadeIn 1.5s;
 }
 
-/* Animations for fading footer icons */
+/* Fading animations */
 @-webkit-keyframes fadeIn {
     from { opacity: 0; }
       to { opacity: 1; }
@@ -97,6 +102,14 @@ footer ul li a:hover #locked {
 @keyframes fadeIn {
     from { opacity: 0; }
       to { opacity: 1; }
+}
+@-webkit-keyframes fadeInTranslucent {
+    from { opacity: 0 }
+      to { opacity: 0.9 }
+}
+@keyframes fadeInTranslucent {
+    from { opacity: 0 }
+      to { opacity: 0.9 }
 }
 
 /*
@@ -112,6 +125,8 @@ ul.posts li {
 
 .title, .tagline {
   text-align: center;
+  -webkit-animation: fadeIn ease-in 1s;
+  animation: fadeIn ease-in 1s;
 }
 
 #myphoto {
@@ -144,11 +159,13 @@ ul.posts li {
   content: "";
   background-image: url(/assets/pinkflowers.jpg);
   background-size: 100% 100%;
-  opacity: 0.9;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
   z-index: -1;
+  opacity: 0.9;
+  -webkit-animation: fadeInTranslucent 1.25s;
+  animation: fadeInTranslucent 1.25s;
 }
