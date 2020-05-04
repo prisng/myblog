@@ -1,2 +1,2 @@
 # prisng.github.io
-A beginner cooking blog.
+My personal blog. Work in progress.
