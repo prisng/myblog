@@ -1,13 +1,76 @@
-<div class="about-me">
-  <img id="myphoto" src="/assets/mi2.png" alt="Photo of me">
-  <h1>About Me</h1>
-  <div class="blurb">
-    <p>Hi! My name is Priscilla and I'm a Software Engineer based in the Bay Area. I recently graduated from San Jose State
-      University with a Bachelor's Degree in Computer Science and minors in Mathematics and Philosophy. </p>
+<div class="container" id="about">
+
+  <!-- About -->
+  <img id="myphoto" src="/assets/pictures/me.png" alt="Photo of me">
+  <div>
+    <h2>About Me</h2>
+    <p>Hi! My name is Priscilla and I'm a Software Engineer based in the Bay Area. I recently graduated from San Jose
+      University with a Bachelor's Degree in Computer Science and minors in Mathematics and Philosophy. My interests
+      include cooking, baking, gaming, badminton, fitness, and hiking. </p>
   </div>
   <hr/>
-  <h1>Experience</h1>
-  <div class="experience">
-    <p>huh</p>
+
+  <!-- Work Experience -->
+  <div class="experience" id="experience">
+    <h2>Work Experience</h2>
+    <table>
+      <tr>
+        <th><a href="https://www.microsoft.com/"><img id="icon-logo" src="/assets/pictures/msft.png" alt="Microsoft"></a></th>
+        <th class="title">Software Engineer<br>Microsoft</th>
+        <th class="date">May 2020 — Present<br>Redmond, WA</th>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+      <tr>
+        <th><a href="https://www.microsoft.com/"><img id="icon-logo" src="/assets/pictures/msft.png" alt="Microsoft"></a></th>
+        <th class="title">Software Engineer Intern<br>Microsoft</th>
+        <th class="date">Summer 2019<br>Redmond, WA</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td colspan="2">
+          I implemented a data visualization platform within the Office Substrate Pulse team to monitor availablity
+          signals for individuals using the Exchange mail server. I built web APIs in C# to retrieve data from Kusto
+          and created the frontend UI using TypeScript, MobX, and React. By creating individualized views for each
+          tenant user, other teams can use this feature to diagnose and resolve specific underlying issues within
+          Exchange, thus improving user experience.
+        </td>
+      </tr>
+      <tr>
+        <th><a href="https://www.ibm.com/"><img id="icon-logo" src="/assets/pictures/ibm.png" alt="IBM"><a></th>
+        <th class="title">Software Developer Intern<br>IBM</th>
+        <th class="date">Summer 2018<br>San Jose, CA</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td colspan="2">
+          I created an internal web application to help the Research Integrated Solutions team manage their
+          ongoing and past product and service contracts. Features included single sign-on integration, CRUD, and
+          automated email notification for upcoming contract renewals. Developed using Python Flask as backend
+          framework, MySQL for database management, jQuery/AJAX and Bootstrap for UI.
+        </td>
+      </tr>
+    </table>
+  </div>
+  <hr/>
+
+  <!-- Education -->
+  <div class="education" id="education">
+    <h2>Education</h2>
+    <table>
+      <tr>
+        <th><a href="https://www.sjsu.edu/"><img id="icon-logo" src="/assets/pictures/sjsu.png" alt="sjsu"></a></th>
+        <th class="title">San Jose State University<br>B.S. Computer Science, 3.85</th>
+        <th class="date">2015 — 2019<br>San Jose, CA</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          Minors: Mathematics, Philosophy<br>
+          Organizations: Theta Tau (ΘΤ), STEM NOW, Society of Women Engineers
+        </td>
+      </tr>
+    </table>
   </div>
 </div>

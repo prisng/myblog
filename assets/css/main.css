@@ -1,12 +1,24 @@
+/* For smooth anchor transitions */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    font-family: 'Roboto-Light', sans-serif;
+    font-size: 1rem;
+    line-height: 1.75em;
     margin: 0;
     padding: 0;
-    font-family: 'Nunito', sans-serif;
     text-align: center;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
 }
 
 h3 {
@@ -14,48 +26,47 @@ h3 {
     font-weight: lighter;
 }
 
-p {
-    font-size: 120%;
-    line-height: 1.4em;
-    color: #333;
-    font-weight: lighter;
-}
-
 a {
-    text-decoration: none;
     color: white;
     display: block; /* for clickable item list links */
+    text-decoration: none;
 }
 
 hr {
     border: 0;
     border-top: 1px solid #b5a1ab;
+    margin: auto 1rem;
     padding: 7.5px;
-    margin: auto 100px;
+}
+
+hr.header {
+    border: 0;
+    border-top: 1px solid white;
+    margin: 2.5rem 25rem 0rem 25rem;
 }
 
 nav ul {
-    list-style: none;
     display: inline-flex;
     font-weight: bold;
     letter-spacing: 0.15em;
-    text-align: center;
+    list-style: none;
     margin: 0;
     padding: 0;
+    text-align: center;
     width: 100%;
 }
 
-nav ul li {
+nav ul a {
+    background-color: #b5a1ab;
     display: block;
     outline: 1px solid transparent;
+    padding: 0.5rem;
     width: 100%;
-    padding: 20px;
-    background-color: #b5a1ab;
 }
 
-nav ul li:hover {
-    cursor: pointer;
+nav ul a:hover {
     background-color: #c9b5be;
+    cursor: pointer;
     transition: 0.5s;
 }
 
@@ -63,13 +74,12 @@ footer {
     border-top: 1px solid #b5a1ab;
     font-size: .75em;
     padding: 7.5px;
-    margin: auto 100px;
 }
 
 footer ul {
     list-style: none;
-    text-align: center;
     padding: 0;
+    text-align: center;
 }
 
 footer ul li {
@@ -78,8 +88,8 @@ footer ul li {
 }
 
 footer ul li a {
-    display: inline;
     color: #b5a1ab;
+    display: inline;
 }
 
 footer ul li a:hover #unlocked, footer ul li a #locked {
@@ -88,10 +98,10 @@ footer ul li a:hover #unlocked, footer ul li a #locked {
 }
 
 footer ul li a:hover #locked {
-    display: inline;
-    text-decoration: none;
     -webkit-animation: fadeIn 1.25s;
     animation: fadeIn 1.5s;
+    display: inline;
+    text-decoration: none;
 }
 
 /* Fading animations */
@@ -112,60 +122,87 @@ footer ul li a:hover #locked {
       to { opacity: 0.9 }
 }
 
-/*
-ul.posts {
-    margin: 20px auto 40px;
-    font-size: 1.5em;
+/* Fonts */
+
+@font-face {
+	 font-family: "Roboto-Thin";
+	  src: url("/assets/fonts/Roboto-Thin.ttf");
 }
 
-ul.posts li {
-    list-style: none;
+@font-face {
+	 font-family: "Roboto-Light";
+	  src: url("/assets/fonts/Roboto-Light.ttf");
 }
-*/
 
-.title, .tagline {
-  text-align: center;
-  -webkit-animation: fadeIn ease-in 1s;
-  animation: fadeIn ease-in 1s;
+@font-face {
+	 font-family: "Roboto-Bold";
+	  src: url("/assets/fonts/Roboto-Bold.ttf");
 }
 
 #myphoto {
-  padding-top: 25px;
-  width: 15%;
-  height: auto;
+    height: 200px;
+    padding-top: 30px;
+    width: 200px;
 }
 
-.blurb {
-  padding-left: 150px;
-  padding-right: 150px;
-  padding-bottom: 10px;
+#icon-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.container {
+    padding: 0rem 20rem 1rem 20rem;
 }
 
 .navbar {
-  text-align: left;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
 .cover {
-  padding: 220px;
-  margin: 0;
-  font-size: 150%;
-  text-align: center;
-  color: white;
-  position: relative;
+    -webkit-animation: fadeIn ease-in 1s;
+    animation: fadeIn ease-in 1s;
+    color: white;
+    line-height: 0.25rem;
+    margin: 0;
+    padding: 15rem;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 /* make cover background image translucent */
 .cover::before {
-  content: "";
-  background-image: url(/assets/pinkflowers.jpg);
-  background-size: 100% 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-  opacity: 0.9;
-  -webkit-animation: fadeInTranslucent 1.25s;
-  animation: fadeInTranslucent 1.25s;
+    -webkit-animation: fadeInTranslucent 1.25s;
+    animation: fadeInTranslucent 1.25s;
+    background-image: url(/assets/pictures/pinkflowers.jpg);
+    background-size: 100% 100%;
+    content: "";
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.experience table, .education table {
+    text-align: left;
+    width: 100%;
+}
+
+.experience table tr th.title, .education table tr th.title{
+    padding-left: 2.5rem;
+}
+
+.experience table tr th.date, .education table tr th.date {
+    font-family: 'Roboto-Thin', sans-serif;
+    font-style: italic;
+    text-align: right;
+    vertical-align: text-top;
+}
+
+.experience table tr td, .education table tr td {
+    padding: 1rem 0rem 1rem 2.5rem;
 }
