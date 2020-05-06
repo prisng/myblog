@@ -3,13 +3,15 @@
 		<head>
       <!-- link to main stylesheet -->
       <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-		  {% include header.html %}
 			<!-- fontawesome social media icons -->
       <script src="https://kit.fontawesome.com/8a881f87a4.js" crossorigin="anonymous"></script>
 		</head>
 		<body id="home">
-			{% include navigation.html %}
-      {% include about.html %}
-			{% include footer.html %}
+				{% include header.html %}
+				<div class="content">
+					{% include navigation.html %}
+		      {% include about.html %}
+					{% include footer.html %}
+				</div>
 		</body>
 	</html>

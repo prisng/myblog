@@ -1,6 +1,52 @@
-/* For smooth anchor transitions */
+/* --------------------
+          Fonts
+   -------------------- */
+@font-face {
+	 font-family: "Roboto-Thin";
+	  src: url("/assets/fonts/Roboto-Thin.ttf");
+}
+
+@font-face {
+	 font-family: "Roboto-Light";
+	  src: url("/assets/fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+	 font-family: "Roboto-Bold";
+	  src: url("/assets/fonts/Roboto-Bold.ttf");
+}
+
+/* --------------------
+    Fading animation
+   -------------------- */
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@-webkit-keyframes fadeInTranslucent {
+    from { opacity: 0 }
+      to { opacity: 0.9 }
+}
+@keyframes fadeInTranslucent {
+    from { opacity: 0 }
+      to { opacity: 0.9 }
+}
+
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* For smooth anchor transitions */
+}
+
+header {
+    color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 body {
@@ -13,7 +59,6 @@ body {
 }
 
 h1 {
-    font-family: 'Roboto-Bold', sans-serif;
     font-size: 3rem;
 }
 
@@ -39,10 +84,22 @@ hr {
     padding: 7.5px;
 }
 
-hr.header {
-    border: 0;
-    border-top: 1px solid white;
-    margin: 2.5rem 25rem 0rem 25rem;
+/* --------------------
+    Body content
+   -------------------- */
+.content {
+   height: 100%;
+   position: absolute;
+   top: 100%; /* push content below header*/
+   width: 100%;
+}
+
+/* --------------------
+    Navigation Bar
+   -------------------- */
+.navbar {
+   font-size: 1rem;
+   text-transform: uppercase;
 }
 
 nav ul {
@@ -70,129 +127,81 @@ nav ul a:hover {
     transition: 0.5s;
 }
 
-footer {
-    border-top: 1px solid #b5a1ab;
-    font-size: .75em;
-    padding: 7.5px;
+/* --------------------
+    Header background
+   -------------------- */
+.background {
+    -webkit-animation: fadeIn ease-in 1s;
+    animation: fadeIn ease-in 1s;
+    width:  100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(/assets/pictures/pinkflowers.jpg);
+    background-size: cover;
 }
 
-footer ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
+.background-overlay {
+    font-family: 'Roboto-Thin', sans-serif;
+    position: absolute;
+    width:  100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* dark overlay opacity */
+    /* for centering title and tagline text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-footer ul li {
-    display: inline;
-    margin: auto 2.5em;
+hr.header {
+    border: 0;
+    border-top: 0.5px solid white;
+    margin: -0.5rem 0 -1.25rem 0;
+    width: 7.5%;
 }
 
-footer ul li a {
-    color: #b5a1ab;
-    display: inline;
-}
-
-footer ul li a:hover #unlocked, footer ul li a #locked {
-    display: none;
-    text-decoration: none;
-}
-
-footer ul li a:hover #locked {
-    -webkit-animation: fadeIn 1.25s;
-    animation: fadeIn 1.5s;
-    display: inline;
-    text-decoration: none;
-}
-
-/* Fading animations */
-@-webkit-keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
-}
-@keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
-}
-@-webkit-keyframes fadeInTranslucent {
-    from { opacity: 0 }
-      to { opacity: 0.9 }
-}
-@keyframes fadeInTranslucent {
-    from { opacity: 0 }
-      to { opacity: 0.9 }
-}
-
-/* Fonts */
-
-@font-face {
-	 font-family: "Roboto-Thin";
-	  src: url("/assets/fonts/Roboto-Thin.ttf");
-}
-
-@font-face {
-	 font-family: "Roboto-Light";
-	  src: url("/assets/fonts/Roboto-Light.ttf");
-}
-
-@font-face {
-	 font-family: "Roboto-Bold";
-	  src: url("/assets/fonts/Roboto-Bold.ttf");
-}
-
-#myphoto {
-    height: 200px;
-    padding-top: 30px;
-    width: 200px;
-}
-
-#icon-logo {
-    width: 50px;
-    height: 50px;
-}
-
-.container {
-    padding: 0rem 20rem 1rem 20rem;
-}
-
-.navbar {
-    font-size: 1rem;
-    text-transform: uppercase;
-}
-
-.cover {
+/* .cover {
     -webkit-animation: fadeIn ease-in 1s;
     animation: fadeIn ease-in 1s;
     color: white;
     line-height: 0.25rem;
-    margin: 0;
-    padding: 15rem;
-    position: relative;
     text-align: center;
     text-transform: uppercase;
+    position: relative;
+} */
+
+  /* make cover background image translucent */
+  /* .cover::before {
+   -webkit-animation: fadeInTranslucent 1.25s;
+   animation: fadeInTranslucent 1.25s;
+   background-image: url(/assets/pictures/pinkflowers.jpg);
+   background-size: 100% 100%;
+   content: "";
+   opacity: 0.9;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: -1;
+  } */
+
+/* --------------------
+    Homepage content
+  -------------------- */
+.homepage {
+   padding: 0rem 20rem 1rem 20rem;
 }
 
-/* make cover background image translucent */
-.cover::before {
-    -webkit-animation: fadeInTranslucent 1.25s;
-    animation: fadeInTranslucent 1.25s;
-    background-image: url(/assets/pictures/pinkflowers.jpg);
-    background-size: 100% 100%;
-    content: "";
-    opacity: 0.9;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-}
-
+/* --------------------
+    Experience Section
+  -------------------- */
 .experience table, .education table {
     text-align: left;
     width: 100%;
 }
 
-.experience table tr th.title, .education table tr th.title{
+.experience table tr th.title, .education table tr th.title {
     padding-left: 2.5rem;
 }
 
@@ -205,4 +214,55 @@ footer ul li a:hover #locked {
 
 .experience table tr td, .education table tr td {
     padding: 1rem 0rem 1rem 2.5rem;
+}
+
+/* --------------------
+  Footer - social links
+   -------------------- */
+.social_links {
+    border-top: 1px solid #b5a1ab;
+    font-size: .75em;
+    padding: 7.5px;
+}
+
+.social_links ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.social_links ul li {
+    display: inline;
+    margin: auto 2.5em;
+}
+
+.social_links ul li a {
+    color: #b5a1ab;
+    display: inline;
+}
+
+.social_links ul li a:hover #unlocked, footer ul li a #locked {
+    display: none;
+    text-decoration: none;
+}
+
+.social_links ul li a:hover #locked {
+    -webkit-animation: fadeIn 1.25s;
+    animation: fadeIn 1.5s;
+    display: inline;
+    text-decoration: none;
+}
+
+/* --------------------
+        Photos
+   -------------------- */
+#myphoto {
+    height: 200px;
+    padding-top: 30px;
+    width: 200px;
+}
+
+#icon-logo {
+    width: 50px;
+    height: 50px;
 }
