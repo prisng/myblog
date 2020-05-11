@@ -103,6 +103,7 @@ hr {
     display: inline-block;
     width: 100%;
     position: fixed;
+		z-index: 1; /* allows dropdown menu to work beyond background image */
 }
 
 .menu-button {
