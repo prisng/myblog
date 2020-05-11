@@ -50,7 +50,7 @@ header {
 }
 
 body {
-    background-color: #f5f0f3;
+    background-color: #FBF8F9;
     font-family: 'Roboto-Light', sans-serif;
     font-size: 1rem;
     line-height: 1.75em;
@@ -99,15 +99,16 @@ hr {
     Navigation Bar
    -------------------- */
 .navbar {
-    background-color: #f1f1f1;
+		background-color: #FFFFFF;
     display: inline-block;
     width: 100%;
+		padding: 5px 0px;
     position: fixed;
 		z-index: 1; /* allows dropdown menu to work beyond background image */
 }
 
 .menu-button {
-    background-color: #f1f1f1;
+    background-color: #FFFFFF;
     border: none;
     font-size: 2rem;
     margin-left: 40%;
@@ -120,7 +121,7 @@ hr {
 }
 
 .menu-content {
-    background-color: #f1f1f1;
+    background-color: #FFFFFF;
     display: none;
     position: fixed;
     text-align: center;
@@ -129,12 +130,12 @@ hr {
 
 .menu-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 16px 16px;
     display: block;
 }
 
 .menu-content a:hover {
-    background-color: #C9C9C9;
+    background-color: #F2F1F2;
 }
 
 .menu:hover .menu-content {
